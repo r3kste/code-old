@@ -1,0 +1,29 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "iostream": "cpp",
+        "random": "cpp",
+        "ostream": "cpp",
+        "charconv": "cpp",
+        "cmath": "cpp",
+        "any": "cpp",
+        "bitset": "cpp",
+        "compare": "cpp",
+        "coroutine": "cpp",
+        "expected": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "ranges": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "complex": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "chrono": "cpp",
+        "span": "cpp"
+    }
+}
