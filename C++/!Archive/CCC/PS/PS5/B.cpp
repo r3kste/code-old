@@ -30,27 +30,26 @@ void solve();
 
 int main()
 {
-    testitr(false);
+    testitr (false);
 }
 
 void solve()
 {
     fastio;
-
     ll n, q;
     cin >> n >> q;
-    vi a(n);
-    z(i, n)
+    vi a (n);
+    z (i, n)
     {
         cin >> a[i];
     }
-    sort(a.begin(), a.end());
+    sort (a.begin(), a.end());
     ll ps[n + 1] = {0};
-    zr(i, 1, n+1)
+    zr (i, 1, n + 1)
     {
         ps[i] = a[i - 1] + ps[i - 1];
     }
-    z(i, q)
+    z (i, q)
     {
         ll x, y;
         cin >> x >> y;

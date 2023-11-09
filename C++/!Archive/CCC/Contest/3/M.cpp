@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,26 +41,25 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
+    vi a (n);
     vi b;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
     }
     ll s = 0;
-    sort(begin(a), end(a));
+    sort (begin (a), end (a));
+
     for (int ov = 0; ov < n; ov++)
     {
-
         for (int i = ov; i < n - 1; i++)
         {
             s += (a[ov] + a[i + 1]);
         }
     }
+
     cout << s;
     return 0;
 }

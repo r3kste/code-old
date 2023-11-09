@@ -21,7 +21,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -35,27 +34,27 @@ int main()
 int solve()
 {
     fastio;
-
     ll n, p;
     cin >> n >> p;
+    vector<ii> a (n);
 
-    vector<ii> a(n);
     for (int i = 0; i < n; i++)
     {
         cin >> a[i].first;
     }
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i].second;
     }
 
-    sort(a.begin(), a.end(), [](ii &a, ii &b)
-         { return a.second < b.second; });
-
+    sort (a.begin(), a.end(), [] (ii & a, ii & b)
+    {
+        return a.second < b.second;
+    });
     // int ptr = -1;
     // int ptr1 = -1;
     // int cost = 0;
-
     // cost += p;
     // ptr++;
     // for (int rem = n - 1 - ptr; rem > 0; rem = n - 1 - ptr)
@@ -68,7 +67,6 @@ int solve()
     //     else
     //     {
     //         int number = a[ptr].first + ptr;
-
     //         for (; ptr <= number; ptr++)
     //         {
     //         }
@@ -78,6 +76,7 @@ int solve()
     int fi;
     ll cost = p;
     ll np = 1;
+
     for (int i = 0; i < n; i++)
     {
         // if (np >= n)
@@ -90,16 +89,16 @@ int solve()
         // np += a[i].first;
         if (a[i].first > n - np)
         {
-            cost += max((ll)0, (n - np)) * min(p, (ll)a[i].second);
+            cost += max ((ll)0, (n - np)) * min (p, (ll)a[i].second);
             break;
         }
         else
         {
-            cost += a[i].first * min(p, (ll)a[i].second);
+            cost += a[i].first * min (p, (ll)a[i].second);
             np += a[i].first;
         }
     }
-    cout << cost;
 
+    cout << cost;
     return 0;
 }

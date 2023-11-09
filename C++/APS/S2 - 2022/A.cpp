@@ -18,13 +18,10 @@ typedef vector<unsigned long long int> vLL;
 int solve()
 {
     fastio;
-
     ll n, k;
     cin >> n >> k;
-
-    cout << ll(ceil(1.0 * k * (1.0 * n / (n - 1)))) - 1; // it'll be funny if this works
+    cout << ll (ceil (1.0 * k * (1.0 * n / (n - 1)))) - 1; // it'll be funny if this works
     // holy hell, it did
-
     // basically, we want the answer x such that
     // x = k + (x / n)
     // Its something like
@@ -32,19 +29,16 @@ int solve()
     // To this k, add the number of numbers that have been skipped
     // This number of numbers that has been skipped would be equal to floor of (x/n), where x is the final answer
     // x = k * n / (n-1)
-
     // In case of n=3,k=7
     //  x = 7 * 3 / 2 = 21/2 = 10.5 = 10
     //  However when x comes out to be an integer, we need to subtract one (when k%n =0)
     //  We do this by ceil(x) - 1;
-
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,18 +41,17 @@ int main()
 int solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
     int a[n][m];
-
     ll mx = -MOD;
     int mi = 0, mj = 0;
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
-        to(j, 0, m, j + 1)
+        to (j, 0, m, j + 1)
         {
             cin >> a[i][j];
+
             if (a[i][j] > mx)
             {
                 mx = a[i][j];
@@ -59,11 +60,8 @@ int solve()
             }
         }
     }
-
-    int x = max((mj - 1), (m - mj));
-    int y = max(mi - 1, n - mi);
-
+    int x = max ((mj - 1), (m - mj));
+    int y = max (mi - 1, n - mi);
     cout << (x + 1) * (y + 1);
-
     return 0;
 }

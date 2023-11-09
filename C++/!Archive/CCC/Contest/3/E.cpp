@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,19 +41,17 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
+    vi a (n);
     map<int, int> mp;
     ll max = -MOD;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
         mp[a[i]]++;
     }
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         if (mp[a[i]] > max)
         {

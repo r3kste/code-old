@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -35,23 +37,22 @@ int main()
         cout << "\n";
     }
 }
-int reverse(int n)
+int reverse (int n)
 {
     int r = 0;
+
     for (; n > 0; n /= 10)
     {
         r = (r * 10) + (n % 10);
     }
+
     return r;
 }
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-
-    cout << abs((n - reverse(n)) / 9);
-
+    cout << abs ((n - reverse (n)) / 9);
     return 0;
 }

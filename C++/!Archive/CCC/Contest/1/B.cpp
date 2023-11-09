@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,11 +34,9 @@ int main()
 int solve()
 {
     fastio;
-
-    int a,b;
-    cin >> a>>b;
-    int g=__gcd(a,b);
-    cout << (a*b)/g;
-
+    int a, b;
+    cin >> a >> b;
+    int g = __gcd (a, b);
+    cout << (a * b) / g;
     return 0;
 }

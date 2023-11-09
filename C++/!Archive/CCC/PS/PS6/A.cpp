@@ -31,13 +31,12 @@ void solve();
 
 int main()
 {
-    testitr(true);
+    testitr (true);
 }
 
 void solve()
 {
     fastio;
-
     int n;
     cin >> n;
     cout << (n / 2);

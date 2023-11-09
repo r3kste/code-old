@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,30 +36,34 @@ int main()
 int solve()
 {
     fastio;
-
     ll n, h;
     cin >> n >> h;
-    vll a(n);
-    vll diff(n - 1);
-    to(i, 0, n, 1)
+    vll a (n);
+    vll diff (n - 1);
+    to (i, 0, n, 1)
     {
         cin >> a[i];
+
         if (i == 0)
+        {
             continue;
+        }
+
         diff[i - 1] = a[i] - a[i - 1];
     }
-
     ll k = 0;
     ll f = 1, e = h;
+
     while (f <= e)
     {
         ll m = (f + e) / 2;
         ll dam = 0;
-        to(i, 0, n - 1, 1)
+        to (i, 0, n - 1, 1)
         {
-            dam += min(m, diff[i]);
+            dam += min (m, diff[i]);
         }
         dam += m;
+
         if (dam >= h)
         {
             k = m;
@@ -96,7 +102,6 @@ int solve()
     // {
     //     cout << (h - sum + 1) / (c + 1);
     // }
-
     // to(i, 0, n, 1)
     // {
     //     cin >> a[i];
@@ -114,7 +119,6 @@ int solve()
     // }
     // h = h - sum - 1;
     // sort(apag.begin(), apag.end());
-
     // vi sums;
     // to(i, 0, apag.size(), 1)
     // {

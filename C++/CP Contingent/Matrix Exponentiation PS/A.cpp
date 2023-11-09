@@ -31,12 +31,13 @@ struct matrix2
     {
         matrix2 c;
 
-    for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
             for (int j = 0; j < 2; j++)
             {
                 c.mat[i][j] = 0;
 
-                for (int k = 0; k < 2; k++) {
+                for (int k = 0; k < 2; k++)
+                {
                     c.mat[i][j] += a.mat[i][k] * b.mat[k][j] % MOD;
                 }
             }
@@ -57,7 +58,8 @@ struct matrix3
             {
                 c.mat[i][j] = 0;
 
-                for (int k = 0; k < 3; k++) {
+                for (int k = 0; k < 3; k++)
+                {
                     c.mat[i][j] += a.mat[i][k] * b.mat[k][j];
                 }
             }
@@ -72,7 +74,8 @@ matrix2 matpow (matrix2 a, ll n) // binexp of matrices
 
     while (n)
     {
-        if (n & 1) {
+        if (n & 1)
+        {
             i = i * a;
         }
 
@@ -89,7 +92,8 @@ matrix3 matpow (matrix3 a, ll n) // binexp of matrices
 
     while (n)
     {
-        if (n & 1) {
+        if (n & 1)
+        {
             i = i * a;
         }
 
@@ -100,19 +104,23 @@ matrix3 matpow (matrix3 a, ll n) // binexp of matrices
     return i;
 }
 
-matrix2 matpow2 (matrix2 a, ll n) {
+matrix2 matpow2 (matrix2 a, ll n)
+{
     // matrix2 i = {1, 0, 0, 1};
-    if (n == 1) {
+    if (n == 1)
+    {
         return a;
     }
 
     matrix2 x = matpow2 (a, n / 2);
     x = x * x;
 
-    if (n % 2) {
+    if (n % 2)
+    {
         return x * a;
     }
-    else {
+    else
+    {
         return x;
     }
 }

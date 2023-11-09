@@ -21,7 +21,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -35,11 +34,10 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
+    int sum = 0;
 
-    int sum=0;
     for (int i = 0; i < n - 1; i++)
     {
         int temp;

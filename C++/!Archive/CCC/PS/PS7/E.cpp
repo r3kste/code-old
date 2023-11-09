@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,13 +34,11 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
-    ll o=0;
+    ll o = 0;
     cin >> n;
-    vi a(n);
-
-    to(i, 0, n, 1)
+    vi a (n);
+    to (i, 0, n, 1)
     {
         cin >> a[i];
     }
@@ -49,13 +49,11 @@ int solve()
         return 0;
     }
 
-    sort(begin(a), end(a));
-
+    sort (begin (a), end (a));
     int k = 1;
     o += (a[0] - 1);
     a[0] = 1;
-
-    to(i, 1, n, 1)
+    to (i, 1, n, 1)
     {
         if (a[i] != a[i - 1])
         {
@@ -64,7 +62,6 @@ int solve()
             a[i] = k;
         }
     }
-
     cout << o;
     return 0;
 }

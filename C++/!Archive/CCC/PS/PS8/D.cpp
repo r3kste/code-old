@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,29 +36,26 @@ int main()
 int solve()
 {
     fastio;
-
     int n, k;
     cin >> n >> k;
-    vi x(k);
-    vi nom(k);
-
+    vi x (k);
+    vi nom (k);
     // ll f = 1, e = k;
     // while (f <= e)
     // {
     //     ll m = (f + e) / 2;
-
     // }
-
-    to(i, 0, k, 1)
+    to (i, 0, k, 1)
     {
         cin >> x[i];
         nom[i] = n - x[i];
     }
-    sort(nom.begin(), nom.end());
-    vll psnom(k + 1);
-    to(i, 1, k + 1, 1)
+    sort (nom.begin(), nom.end());
+    vll psnom (k + 1);
+    to (i, 1, k + 1, 1)
     {
         psnom[i] = nom[i - 1] + psnom[i - 1];
+
         if (psnom[i] > n - 1)
         {
             cout << i - 1;

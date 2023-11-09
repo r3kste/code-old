@@ -20,9 +20,10 @@ typedef vector<pair<int, int>> vii;
 typedef vector<long long int> vll;
 typedef vector<unsigned long long int> vLL;
 
-bool checkk(string s)
+bool checkk (string s)
 {
     int n = s.length();
+
     for (int i = 1; i < n; i++)
     {
         if (s[i] == s[i - 1])
@@ -30,23 +31,21 @@ bool checkk(string s)
             return false;
         }
     }
+
     return true;
 }
 
 int solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
-
     string s;
     cin >> s;
-
     string t;
     cin >> t;
 
-    if (checkk(s))
+    if (checkk (s))
     {
         cout << "YES";
     }
@@ -61,7 +60,7 @@ int solve()
         }
         else
         {
-            if (checkk(t))
+            if (checkk (t))
             {
                 for (int i = 1; i < n; i++)
                 {
@@ -74,6 +73,7 @@ int solve()
                         }
                     }
                 }
+
                 cout << "YES";
             }
             else
@@ -89,7 +89,6 @@ int solve()
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

@@ -18,43 +18,42 @@ typedef vector<unsigned long long int> vLL;
 int solve()
 {
     fastio;
-
     string temp;
     cin >> temp;
-
     // vi a(n);
     int l = temp.length();
     ll rb = 0;
     ll rs = 0;
     ll rc = 0;
+
     for (int i = 0; i < l; i++)
     {
         if (temp[i] == 'B')
         {
             rb++;
         }
+
         if (temp[i] == 'S')
         {
             rs++;
         }
+
         if (temp[i] == 'C')
         {
             rc++;
         }
     }
+
     int nb, ns, nc;
     cin >> nb >> ns >> nc;
     int pb, ps, pc;
     cin >> pb >> ps >> pc;
-
-    
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     // cin >> t;
 

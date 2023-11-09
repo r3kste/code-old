@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -37,7 +39,7 @@ int solve()
     int n;
     cin >> n;
     int o = 0;
-    to(i, 1, n + 1, 1)
+    to (i, 1, n + 1, 1)
     {
         if (i % 2 == 0)
         {

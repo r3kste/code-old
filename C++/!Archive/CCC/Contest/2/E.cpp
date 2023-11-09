@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,16 +41,15 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     vi a;
     ll min = MOD;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         ll temp;
         cin >> temp;
+
         if (temp % 2 == 0)
         {
             ll mm = temp / 2;
@@ -61,10 +62,12 @@ int solve()
             mm = (mm + 1) / 2;
             temp = (4 * mm + 1);
         }
+
         if (temp < min)
+        {
             min = temp;
+        }
     }
     cout << min;
-
     return 0;
 }

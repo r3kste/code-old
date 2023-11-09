@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,35 +41,36 @@ int main()
 int solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
     int a[n][m];
     set<int> x;
     set<int> y;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
-        to(j, 0, m, j + 1)
+        to (j, 0, m, j + 1)
         {
             cin >> a[i][j];
+
             if (a[i][j] == 1)
             {
-                x.insert(i);
-                y.insert(j);
+                x.insert (i);
+                y.insert (j);
             }
         }
     }
-
     n = n - x.size();
     m = m - y.size();
-
-    int limit = min(n, m);
+    int limit = min (n, m);
 
     if (limit % 2 == 0)
+    {
         cout << "Vivek";
+    }
     else
+    {
         cout << "Ashish";
+    }
 
     return 0;
 }

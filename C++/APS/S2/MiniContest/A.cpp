@@ -18,11 +18,10 @@ typedef vector<unsigned long long int> vLL;
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
+    vi a (n);
 
-    vi a(n);
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
@@ -31,7 +30,6 @@ int solve()
     // sort(a.begin(), a.end());
     ll c = 0;
     ll b = 0;
-
     // for (int i = 0; i < n; i++)
     // {
     //     if (i % 2 == 0)
@@ -43,9 +41,7 @@ int solve()
     //         b += a[i];
     //     }
     // }
-
     // cout << max(b, c) << " " << min(b, c) << "\n";
-
     int l = 0;
     int r = n - 1;
     int i = 0;
@@ -54,13 +50,15 @@ int solve()
     {
         if (i % 2 == 0)
         {
-            c += max(a[l], a[r]);
+            c += max (a[l], a[r]);
         }
         else
         {
-            b += max(a[l], a[r]);
+            b += max (a[l], a[r]);
         }
+
         i++;
+
         if (a[l] > a[r])
         {
             l++;
@@ -72,14 +70,12 @@ int solve()
     }
 
     cout << c << " " << b;
-
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     // cin >> t;
 

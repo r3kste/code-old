@@ -34,39 +34,51 @@ int solve()
     matrix a (n, vector<int> (m, 0) );
     matrix score (n, vector<int> (m, 0) );
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
             cin >> a[i][j];
         }
     }
 
-    for (int i = 0; i < n; i++) {
-         ll min_row = (int) MOD;
+    for (int i = 0; i < n; i++)
+    {
+        ll min_row = (int) MOD;
 
-        for (int j = 0; j < m; j++) {
-            if (a[i][j] <= min_row) {
+        for (int j = 0; j < m; j++)
+        {
+            if (a[i][j] <= min_row)
+            {
                 min_row = a[i][j];
             }
         }
 
-        for (int j = 0; j < m; j++) {
-            if (a[i][j] == min_row) {
+        for (int j = 0; j < m; j++)
+        {
+            if (a[i][j] == min_row)
+            {
                 score[i][j]++;
             }
         }
     }
 
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++)
+    {
         ll min_col = (int) MOD;
 
-        for (int j = 0; j < n; j++) {
-            if (a[j][i] <= min_col) {
+        for (int j = 0; j < n; j++)
+        {
+            if (a[j][i] <= min_col)
+            {
                 min_col = a[j][i];
             }
         }
 
-        for (int j = 0; j < n; j++) {
-            if (a[j][i] == min_col) {
+        for (int j = 0; j < n; j++)
+        {
+            if (a[j][i] == min_col)
+            {
                 score[j][i]++;
             }
         }
@@ -74,16 +86,18 @@ int solve()
 
     ll c = 0;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            if (score[i][j] == 2) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            if (score[i][j] == 2)
+            {
                 c++;
             }
         }
     }
 
     cout << c;
-
     // vi a(n);
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];

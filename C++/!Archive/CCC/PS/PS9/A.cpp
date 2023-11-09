@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,19 +36,21 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     vi a;
-
     ll o = 0;
     int c = 0;
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         int temp;
         cin >> temp;
+
         if (temp != 0)
-            a.push_back(temp);
+        {
+            a.push_back (temp);
+        }
+
         // if (i == 0)
         // {
         //     continue;
@@ -59,12 +63,12 @@ int solve()
         // }
     }
     n = a.size();
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
-        o += abs(a[i]);
+        o += abs (a[i]);
     }
-    a.push_back(1);
-    to(i, 0, n, 1)
+    a.push_back (1);
+    to (i, 0, n, 1)
     {
         if (a[i] < 0)
         {
@@ -88,6 +92,5 @@ int solve()
     //     }
     // }
     cout << o << " " << c;
-
     return 0;
 }

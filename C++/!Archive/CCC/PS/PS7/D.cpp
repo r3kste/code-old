@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,17 +34,15 @@ int main()
 int solve()
 {
     fastio;
-
     int n, o = 0;
     cin >> n;
-    vi a(n);
-
-    to(i, 0, n, 1)
+    vi a (n);
+    to (i, 0, n, 1)
     {
         cin >> a[i];
     }
-    sort(begin(a), end(a));
-    to(i, 0, n / 2, 1)
+    sort (begin (a), end (a));
+    to (i, 0, n / 2, 1)
     {
         o += (a[n - 1 - i] - a[i]);
     }

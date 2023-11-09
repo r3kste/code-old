@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,12 +41,11 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     int a[n][n];
     int fe = 1;
-    int fo = ((n*n + 1) / 2) + 1;
+    int fo = ((n * n + 1) / 2) + 1;
 
     if (n == 2)
     {
@@ -52,11 +53,12 @@ int solve()
     }
     else
     {
-        to(i, 0, n, i + 1)
+        to (i, 0, n, i + 1)
         {
-            to(j, 0, n, j + 1)
+            to (j, 0, n, j + 1)
             {
                 int s = i + j;
+
                 if (s % 2 == 0)
                 {
                     cout << fe << " ";

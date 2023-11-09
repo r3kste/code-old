@@ -24,7 +24,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -38,21 +37,22 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(3);
+    vi a (3);
     a[0] = 1;
     a[1] = 3;
     int k = 2;
     int p, b;
     int c = 0;
+
     for (int i = 3; i < 1e6; i++)
     {
         if (c >= n)
         {
             return 0;
         }
+
         if (k == 0)
         {
             p = 1;
@@ -68,6 +68,7 @@ int solve()
             p = 0;
             b = 1;
         }
+
         if (((3 * i) % (a[p] + a[b])) != 0)
         {
             a[k % 3] = i;
@@ -76,5 +77,6 @@ int solve()
             c++;
         }
     }
+
     return 0;
 }

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,25 +41,23 @@ int main()
 int solve()
 {
     fastio;
-
     char a[8][8];
     vector<char> o;
-
-    to(i, 0, 8, i + 1)
+    to (i, 0, 8, i + 1)
     {
-        to(j, 0, 8, j + 1)
+        to (j, 0, 8, j + 1)
         {
             cin >> a[i][j];
+
             if (a[i][j] != '.')
             {
-                o.push_back(a[i][j]);
+                o.push_back (a[i][j]);
             }
         }
     }
-
-    to(i,0,o.size(),i+1) {
+    to (i, 0, o.size(), i + 1)
+    {
         cout << o[i];
     }
-
     return 0;
 }

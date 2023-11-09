@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,19 +41,18 @@ int main()
 int solve()
 {
     fastio;
-
     ll n, m;
     cin >> n >> m;
     // vi a(n);
     ll max = 0;
     ll mi = -1;
-
-    to(i, 0, m, i + 1)
+    to (i, 0, m, i + 1)
     {
         ll a, q;
         cin >> a >> q;
         ll no = n / q;
-        no = min(a, no);
+        no = min (a, no);
+
         if (no > max)
         {
             max = no;
@@ -59,6 +60,5 @@ int solve()
         }
     }
     cout << mi;
-
     return 0;
 }

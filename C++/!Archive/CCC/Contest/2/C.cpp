@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,21 +41,19 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
-    vll ss(n);
+    vi a (n);
+    vll ss (n);
     ll S = 0;
     ll c = 0;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
         S += a[i];
     }
     ll cS = S;
-    to(i, 1, n + 1, i + 1)
+    to (i, 1, n + 1, i + 1)
     {
         ss[n - i - 1] = ss[n - i] + a[n - i];
     }
@@ -68,6 +68,7 @@ int solve()
     //     }
     // }
     ll s = 0;
+
     for (int k = 0; k < n; k++)
     {
         // if (S % 2 == 0)
@@ -82,17 +83,21 @@ int solve()
         // s = 0;
         // S -= a[k];
         ll rs = ss[k];
+
         if (rs > cS / 2)
         {
             continue;
         }
+
         for (int i = k; i > -1; i--)
         {
             s += a[i];
+
             if (s > cS / 2)
             {
                 break;
             }
+
             if (s == rs)
             {
                 c++;
@@ -108,8 +113,6 @@ int solve()
     //     {
     //     }
     // }
-
     cout << c;
-
     return 0;
 }

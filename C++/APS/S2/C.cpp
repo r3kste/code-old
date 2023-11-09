@@ -31,13 +31,15 @@ int solve()
     cin >> n;
     vi x (n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> x[i];
     }
 
     vi z (n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int temp;
         cin >> temp;
         z[i] = temp - x[i];
@@ -48,16 +50,20 @@ int solve()
     int r = n - 1;
     int ans = 0;
 
-    if (z[r] < 0) {
+    if (z[r] < 0)
+    {
         cout << 0;
         return 0;
     }
 
-    while (l < r) {
-        if (z[r] + z[l] < 0) {
+    while (l < r)
+    {
+        if (z[r] + z[l] < 0)
+        {
             l++;
         }
-        else {
+        else
+        {
             ans++;
             l++;
             r--;

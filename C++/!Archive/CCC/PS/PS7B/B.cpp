@@ -17,10 +17,12 @@ void solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -29,16 +31,19 @@ int main()
     }
 }
 
-bool check(int n)
+bool check (int n)
 {
-    string s = to_string(n);
+    string s = to_string (n);
     map<char, int> k;
     int l = s.length();
-    to(i, 0, l, 1)
+    to (i, 0, l, 1)
     {
         k[s[i]]++;
+
         if (k[s[i]] > 1)
+        {
             return false;
+        }
     }
     return true;
 }
@@ -46,12 +51,11 @@ bool check(int n)
 void solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    to(i, n + 1, 9877, 1)
+    to (i, n + 1, 9877, 1)
     {
-        if (check(i))
+        if (check (i))
         {
             cout << i;
             break;

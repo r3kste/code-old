@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,10 +41,8 @@ int main()
 int solve()
 {
     fastio;
-
     ll x, y, a, b;
     cin >> x >> y >> a >> b;
     cout << (x * a) + (y * b);
-
     return 0;
 }

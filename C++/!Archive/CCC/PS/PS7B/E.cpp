@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,23 +34,23 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
-    to(i, 0, n, 1)
+    vi a (n);
+    to (i, 0, n, 1)
     {
         cin >> a[i];
     }
     int o = 360;
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         int s = 0;
-        to(j, 0, n, 1)
+        to (j, 0, n, 1)
         {
-            s += a[(i + j) % n];
-            o = min(o, abs(360 - s * 2));
+            s += a[ (i + j) % n];
+            o = min (o, abs (360 - s * 2));
         }
+
         if (o == 0)
         {
             cout << 0;

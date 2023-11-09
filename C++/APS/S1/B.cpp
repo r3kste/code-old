@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -35,31 +37,44 @@ int main()
         cout << "\n";
     }
 }
-LL power(LL x, LL y, LL mod)
+LL power (LL x, LL y, LL mod)
 {
     LL o = 1;
     x = x % mod;
+
     while (y > 0)
     {
         if (y & 1) // checks whether the LSB of y is 1.
+        {
             o = (o * x) % mod;
+        }
+
         y = y >> 1;        // y = y/2
         x = (x * x) % mod; // x = x*x
     }
+
     return o;
 }
-LL inv_m(LL n, LL mod)
+LL inv_m (LL n, LL mod)
 {
-    return power(n, mod - 2, mod); // n^(mod-2) % mod
+    return power (n, mod - 2, mod); // n^(mod-2) % mod
 }
-LL ncr_m(LL n, LL r, LL mod)
+LL ncr_m (LL n, LL r, LL mod)
 {
     if (n < r)
+    {
         return 0;
+    }
+
     if (r == 0)
+    {
         return 1;
+    }
+
     if (n - r < r)
-        return ncr_m(n, n - r, mod); // make sure r is the lower r
+    {
+        return ncr_m (n, n - r, mod);    // make sure r is the lower r
+    }
 
     LL o = 1;
 
@@ -79,19 +94,17 @@ LL ncr_m(LL n, LL r, LL mod)
     for (int i = r; i > 0; i--)
     {
         o = (o * (n - i + 1)) % mod;   // calculates n!/(n-r)! together
-        o = (o * inv_m(i, mod)) % mod; // divides the above by r!
+        o = (o * inv_m (i, mod)) % mod; // divides the above by r!
     }
+
     return o;
 }
 
 int solve()
 {
     fastio;
-
     LL a, b;
     cin >> a >> b;
-
-    cout << ncr_m(a, b, MOD);
-
+    cout << ncr_m (a, b, MOD);
     return 0;
 }

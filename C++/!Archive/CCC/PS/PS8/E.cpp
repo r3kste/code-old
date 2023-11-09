@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,13 +36,11 @@ int main()
 int solve()
 {
     fastio;
-
     int n, q;
     cin >> n >> q;
-
-    vi a(n);
-    vector<ll> ps(n + 1);
-    to(i, 0, n, 1)
+    vi a (n);
+    vector<ll> ps (n + 1);
+    to (i, 0, n, 1)
     {
         if (i == 0)
         {
@@ -48,17 +48,16 @@ int solve()
             ps[1] = a[0];
             continue;
         }
+
         cin >> a[i];
         ps[i + 1] = ps[i] + a[i];
-        a[i] = max(a[i], a[i - 1]);
+        a[i] = max (a[i], a[i - 1]);
     }
-
-    to(i, 0, q, 1)
+    to (i, 0, q, 1)
     {
         ll temp;
         cin >> temp;
-        cout << ps[upper_bound(a.begin(), a.end(), temp) - a.begin()] << " ";
+        cout << ps[upper_bound (a.begin(), a.end(), temp) - a.begin()] << " ";
     }
-
     return 0;
 }

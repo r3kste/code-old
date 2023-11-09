@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,16 +34,17 @@ int main()
 int solve()
 {
     fastio;
-
     int a, b, c;
     cin >> a >> b >> c;
     ll o = 2 * c;
-    if (a == b || abs(a - b) == 1)
+
+    if (a == b || abs (a - b) == 1)
     {
         cout << (o + a + b);
         return 0;
     }
-    ll mn = min(a, b);
+
+    ll mn = min (a, b);
     cout << o + mn + mn + 1;
     return 0;
 }

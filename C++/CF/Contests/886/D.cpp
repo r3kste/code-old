@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,25 +41,25 @@ int main()
 int solve()
 {
     fastio;
-
     int n, k;
     cin >> n >> k;
-    vi a(n);
+    vi a (n);
     int temp;
-    int c=1;
+    int c = 1;
     int o;
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
+
         if (i == 0)
         {
             temp = a[0];
         }
+
         if (a[i] - a[i - 1] <= k)
         {
             c++;
         }
     }
-
     return 0;
 }

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,17 +41,20 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    if(n%4==0) {
-        cout << n/2;
+
+    if (n % 4 == 0)
+    {
+        cout << n / 2;
     }
-    else if(n%2==0) {
-        cout <<3*n +2;
+    else if (n % 2 == 0)
+    {
+        cout << 3 * n + 2;
     }
-    else {
-        cout << 3*n+1;
+    else
+    {
+        cout << 3 * n + 1;
     }
 
     return 0;

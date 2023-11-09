@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,27 +34,24 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     string s;
     cin >> s;
     int a[26];
-    fill(begin(a), end(a), 0);
-
-    to(i, 0, n, 1)
+    fill (begin (a), end (a), 0);
+    to (i, 0, n, 1)
     {
         a[s[i] - 97]++;
     }
     int mx = 0;
-    to(i, 0, 26, 1)
+    to (i, 0, 26, 1)
     {
         if (a[i] > a[mx])
         {
             mx = i;
         }
     }
-    cout << (char)(mx + 97);
-
+    cout << (char) (mx + 97);
     return 0;
 }

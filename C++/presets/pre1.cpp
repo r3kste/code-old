@@ -27,22 +27,18 @@ typedef vector<long long int> vll;
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-
     // vi a(n);
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];
     // }
-
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

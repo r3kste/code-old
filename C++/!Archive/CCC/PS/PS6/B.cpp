@@ -31,10 +31,10 @@ void solve();
 
 int main()
 {
-    testitr(true);
+    testitr (true);
 }
 
-int calc(int n, int m)
+int calc (int n, int m)
 {
     if (m == 1)
     {
@@ -46,15 +46,14 @@ int calc(int n, int m)
     }
     else
     {
-        return n + m - 1 + calc(n - 1, m - 1);
+        return n + m - 1 + calc (n - 1, m - 1);
     }
 }
 
 void solve()
 {
     fastio;
-
     int n, m, k;
     cin >> n >> m >> k;
-    cout << ((k == calc(n, m)) ? "YES" : "NO");
+    cout << ((k == calc (n, m)) ? "YES" : "NO");
 }

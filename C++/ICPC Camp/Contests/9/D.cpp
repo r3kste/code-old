@@ -34,29 +34,29 @@ int solve()
     vii a (n);
     int rent = MOD;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> a[i].F;
 
-        if (a[i].F < rent) {
+        if (a[i].F < rent)
+        {
             rent = a[i];
         }
 
         cin >> a[i].S;
     }
 
-    rent = min(rent,money_zhenya);
-
+    rent = min (rent, money_zhenya);
     int m;
     cin >> m;
-    vector<vector<int>> b (m,vector(2,0));
+    vector<vector<int>> b (m, vector (2, 0));
 
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++)
+    {
         cin >> b[i][0];
         cin >> b[i][1];
         cin >> b[i][2];
     }
-
-
 
     return 0;
 }

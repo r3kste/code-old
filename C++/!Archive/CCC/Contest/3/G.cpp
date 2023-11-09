@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,15 +41,15 @@ int main()
 int solve()
 {
     fastio;
-
     int x, y;
     cin >> x >> y;
+
     if (x == y || ((x + y) & (x)) != x || ((x + y) ^ (x)) != y)
     {
         cout << -1;
         return 0;
     }
-    cout << (x + y) << " " << x;
 
+    cout << (x + y) << " " << x;
     return 0;
 }

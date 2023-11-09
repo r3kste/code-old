@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,26 +41,25 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     ll pe = 0;
     ll o = 0;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         ll enter, exit;
         cin >> exit >> enter;
         ll temp = pe;
         temp = temp - exit;
         temp = temp + enter;
+
         if (temp > o)
         {
             o = temp;
         }
+
         pe = temp;
     }
-
     cout << o;
     return 0;
 }

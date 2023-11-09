@@ -31,12 +31,12 @@ int solve();
 
 int main()
 {
-    testitr(true);
+    testitr (true);
 }
 
-bool check(int l, int r, int x, int y)
+bool check (int l, int r, int x, int y)
 {
-    int g = __gcd(x, y);
+    int g = __gcd (x, y);
     ll lc = x * y / g;
     return (lc <= r);
 }
@@ -44,10 +44,10 @@ bool check(int l, int r, int x, int y)
 int solve()
 {
     fastio;
-
     int l, r;
     cin >> l >> r;
     int x = l, y = l + 1;
+
     if (l * 2 <= r)
     {
         cout << l << " " << l * 2;
@@ -56,5 +56,6 @@ int solve()
     {
         cout << -1 << " " << -1;
     }
+
     return 0;
 }

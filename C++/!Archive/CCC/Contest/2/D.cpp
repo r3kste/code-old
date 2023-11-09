@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,14 +41,13 @@ int main()
 int solve()
 {
     fastio;
-
     int n, k;
     cin >> n >> k;
-    vi a(n);
-    vi ps(n + 1);
+    vi a (n);
+    vi ps (n + 1);
     int max = 0;
     map<int, int> mp;
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         ll temp;
         cin >> temp;
@@ -57,6 +58,7 @@ int solve()
     for (int i = 0; i < n + 1; i++)
     {
         int temp = ps[i];
+
         for (int j = 0; j < n + 1; j++)
         {
             if (ps[j] == temp)
@@ -70,6 +72,5 @@ int solve()
     }
 
     cout << max;
-
     return 0;
 }

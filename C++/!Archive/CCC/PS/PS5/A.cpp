@@ -31,25 +31,25 @@ void solve();
 
 int main()
 {
-    testitr(false);
+    testitr (false);
 }
 
 void solve()
 {
     fastio;
-
     int n, k;
     cin >> n >> k;
-    int c=0;
-    z(i, n)
+    int c = 0;
+    z (i, n)
     {
         int temp;
         cin >> temp;
         temp = temp + k;
+
         if (temp <= 5)
         {
             c++;
         }
     }
-    cout << c/3;
+    cout << c / 3;
 }

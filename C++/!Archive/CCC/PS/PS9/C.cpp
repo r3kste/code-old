@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,22 +36,20 @@ int main()
 int solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
-
     ll s = 0;
-    vll a(n);
+    vll a (n);
     // vll ps(n + 1);
     // ps[0] = 0;
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         cin >> a[i];
         // ps[i + 1] = ps[i] + a[i];
     }
     ll tblock = 0;
     // vi b(m);
-    to(i, 0, m, 1)
+    to (i, 0, m, 1)
     {
         ll temp;
         cin >> temp;
@@ -83,8 +83,8 @@ int solve()
         {
             s += a[tblock++];
         }
-        cout << tblock+1 << " " << temp - s << "\n";
-    }
 
+        cout << tblock + 1 << " " << temp - s << "\n";
+    }
     return 0;
 }

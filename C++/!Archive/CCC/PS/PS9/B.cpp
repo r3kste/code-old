@@ -19,10 +19,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -34,22 +36,23 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     string s;
     cin >> s;
     vector<char> o;
-
     int i = 0, j = 0;
+
     while (i < n && j < n)
     {
         j = i + 1;
         char ci = s[i];
+
         while (s[j] != s[i])
         {
             j++;
         }
+
         cout << (s[i]);
         i = j + 1;
     }

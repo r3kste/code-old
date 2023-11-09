@@ -20,9 +20,10 @@ typedef vector<pair<int, int>> vii;
 typedef vector<long long int> vll;
 typedef vector<unsigned long long int> vLL;
 
-bool check_alt(string s)
+bool check_alt (string s)
 {
     int n = s.length();
+
     for (int i = 1; i < n; i++)
     {
         if (s[i] != s[i - 1])
@@ -30,12 +31,14 @@ bool check_alt(string s)
             return false;
         }
     }
+
     return true;
 }
 
-bool check_sym(string s)
+bool check_sym (string s)
 {
     int n = s.length();
+
     for (int i = 1; i < n; i++)
     {
         if (s[i] == s[n - i - 1])
@@ -43,20 +46,18 @@ bool check_sym(string s)
             return false;
         }
     }
+
     return true;
 }
 
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     int k = n;
-
     // vector<char> s;
     string s1 = "";
-
     int c1 = 0;
     int c0 = 0;
 
@@ -66,6 +67,7 @@ int solve()
         cin >> temp;
         // s.push_back(temp);
         s1 += ("" + temp);
+
         if (temp == 1)
         {
             c1++;
@@ -82,7 +84,7 @@ int solve()
     }
     else
     {
-        if (check_sym(s1))
+        if (check_sym (s1))
         {
             cout << "0\n";
         }
@@ -90,20 +92,20 @@ int solve()
         {
             for (int i = 0; i < k; i++)
             {
-                string a = s1.substr(0, i);
-                string b = s1.substr(i, k - i);
+                string a = s1.substr (0, i);
+                string b = s1.substr (i, k - i);
             }
         }
 
         return 0;
     }
+
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

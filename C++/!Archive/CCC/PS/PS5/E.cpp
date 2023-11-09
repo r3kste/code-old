@@ -31,19 +31,18 @@ void solve();
 
 int main()
 {
-    testitr(true);
+    testitr (true);
 }
 
 void solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
+    vi a (n);
     map<int, ll> mp;
     ll c = 0;
-    z(i, n)
+    z (i, n)
     {
         cin >> a[i];
         a[i] = a[i] - i;

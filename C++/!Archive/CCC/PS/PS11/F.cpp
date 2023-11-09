@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,13 +41,11 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     int a[n][3];
     ll X = 0, Y = 0, Z = 0;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         ll x, y, z;
         cin >> x >> y >> z;

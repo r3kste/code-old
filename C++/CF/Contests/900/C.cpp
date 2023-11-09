@@ -24,7 +24,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -35,7 +34,7 @@ int main()
     }
 }
 
-ll sumtill(ll n)
+ll sumtill (ll n)
 {
     return (n * (n + 1)) / 2;
 }
@@ -45,15 +44,15 @@ int solve()
     fastio;
     ll n, k, x;
     cin >> n >> k >> x;
-
     // if (k >= x || k > n)
     // {
     //     cout << "NO";
     // }
     // else
     // {
-    ll max = sumtill(n) - sumtill(n - k);
-    ll min = sumtill(k);
+    ll max = sumtill (n) - sumtill (n - k);
+    ll min = sumtill (k);
+
     if (x <= max && x >= min)
     {
         cout << "YES";
@@ -62,7 +61,7 @@ int solve()
     {
         cout << "NO";
     }
-    // }
 
+    // }
     return 0;
 }

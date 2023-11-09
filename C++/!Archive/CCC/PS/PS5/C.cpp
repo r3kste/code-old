@@ -31,15 +31,15 @@ int solve();
 
 int main()
 {
-    testitr(false);
+    testitr (false);
 }
 
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
+
     if (n > 26 || n == 1)
     {
         string s;
@@ -47,14 +47,16 @@ int solve()
         cout << "Yes";
         return 0;
     }
+
     bool a[26];
-    fill(begin(a), end(a), false);
-    z(i, n)
+    fill (begin (a), end (a), false);
+    z (i, n)
     {
         char temp;
         cin >> temp;
-        int t = int(temp);
+        int t = int (temp);
         t = t - 97;
+
         if (a[t])
         {
             cout << "Yes";

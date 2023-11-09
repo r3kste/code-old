@@ -31,7 +31,8 @@ int solve()
     cin >> n;
     vii a (n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int temp;
         cin >> temp;
         a[i] = mp (temp, i);
@@ -39,7 +40,8 @@ int solve()
 
     vii b (n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int temp;
         cin >> temp;
         b[i] = mp (temp, i);
@@ -48,7 +50,8 @@ int solve()
     sort (all (a) );
     sort (all (b) );
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << a[i].S + 1 << " " << b[i].S + 1 << "\n";
     }
 

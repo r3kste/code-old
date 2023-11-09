@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -36,10 +38,10 @@ int main()
     }
 }
 
-int op(vi a)
+int op (vi a)
 {
-    sort(begin(a), end(a));
-    to(i, 0, a.size(), 1)
+    sort (begin (a), end (a));
+    to (i, 0, a.size(), 1)
     {
         a[i] += (a.size() - i);
     }
@@ -48,24 +50,20 @@ int op(vi a)
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
-
-    to(i, 0, n, i + 1)
+    vi a (n);
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
     }
-    sort(begin(a), end(a));
-
+    sort (begin (a), end (a));
     int q;
     cin >> q;
-    to(i, 0, q, i + 1)
+    to (i, 0, q, i + 1)
     {
         int j, x;
         a[j - 1] = x;
     }
-
     return 0;
 }

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,12 +41,10 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n), b;
-
-    to(i, 0, n, i + 1)
+    vi a (n), b;
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
     }
@@ -55,14 +55,16 @@ int solve()
         return 0;
     }
 
-    to(i, 0, n - 1, i + 1)
+    to (i, 0, n - 1, i + 1)
     {
         ll d = a[i] - a[i + 1];
+
         if (i + d >= n)
         {
             cout << "NO";
             return 0;
         }
+
         if (a[i + 1] != a[i + d])
         {
             cout << "NO";
@@ -70,6 +72,5 @@ int solve()
         }
     }
     cout << "YES";
-
     return 0;
 }

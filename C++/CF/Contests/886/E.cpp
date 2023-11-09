@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,29 +41,22 @@ int main()
 int solve()
 {
     fastio;
-
     ll n, c;
     cin >> n >> c;
-    vll a(n);
+    vll a (n);
     ll C = 0;
     ll S = 0;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
         C += (a[i] * a[i]);
         S += a[i];
     }
-
     ll b = 4 * S;
     ll a0 = 4 * n;
     ll co = C - c;
-
     ll D = (b * b) - (4 * a0 * co);
-
-    ll o = (sqrt(D) - b) / (2 * a0);
-
+    ll o = (sqrt (D) - b) / (2 * a0);
     cout << o;
-
     return 0;
 }

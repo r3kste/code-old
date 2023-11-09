@@ -24,10 +24,12 @@ int c = 0;
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,11 +41,10 @@ int main()
 int solve()
 {
     fastio;
-
     ll m, k, a, ak;
     cin >> m >> k >> a >> ak;
-
     ll ck = k;
+
     if (m <= a)
     {
         cout << 0;
@@ -54,16 +55,22 @@ int solve()
         {
             m = m - k;
             ak = ak - 1;
+
             if (m <= a)
             {
                 cout << 0;
             }
         }
-        m=m-a;
+
+        m = m - a;
         ll alt = MOD;
+
         if (a > 0)
-            alt = ceil((m - a) / double(ck));
-        cout << min(alt, (ll)((m / ck) + (m % ck)));
+        {
+            alt = ceil ((m - a) / double (ck));
+        }
+
+        cout << min (alt, (ll) ((m / ck) + (m % ck)));
     }
 
     return 0;

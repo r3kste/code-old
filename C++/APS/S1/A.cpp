@@ -34,11 +34,13 @@ int solve()
     int l = 0;
     int r = n - 1;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> a[i];
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         // if (i % 2 == 0) {
         //     f[l] = temp;
         //     l++;
@@ -47,17 +49,20 @@ int solve()
         //     f[n - k - 1] = temp;
         //     k++;
         // }
-        if (i % 2 == 0) {
+        if (i % 2 == 0)
+        {
             f.pb (a[l]);
             l++;
         }
-        else {
+        else
+        {
             f.pb (a[r]);
             r--;
         }
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << f[i] << " ";
     }
 

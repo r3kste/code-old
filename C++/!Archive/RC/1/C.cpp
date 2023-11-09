@@ -6,7 +6,6 @@ int main()
     std::string binaryNumber;
     int n = 0; // Counter for ones
     int m = 0; // Counter for zeros
-
     // Input binary number as a string
     std::cin >> binaryNumber;
 
@@ -24,6 +23,5 @@ int main()
     }
 
     std::cout << (n & m);
-
     return 0;
 }

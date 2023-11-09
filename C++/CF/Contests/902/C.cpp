@@ -21,7 +21,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -43,6 +42,7 @@ int solve()
         cout << m + 1;
         return 0;
     }
+
     if (k > n + 1 || k > m + 1)
     {
         cout << 0;
@@ -54,17 +54,17 @@ int solve()
     for (int x = 0; x <= m; x++)
     {
         vi rem;
-        rem.push_back(x);
+        rem.push_back (x);
 
         for (int i = n; i >= 1; i--)
         {
             int last = rem.back();
             int next = last % i;
-            rem.push_back(next);
+            rem.push_back (next);
         }
 
-        sort(rem.begin(), rem.end());
-        rem.erase(unique(rem.begin(), rem.end()), rem.end());
+        sort (rem.begin(), rem.end());
+        rem.erase (unique (rem.begin(), rem.end()), rem.end());
 
         if (rem.size() == k)
         {
@@ -73,6 +73,5 @@ int solve()
     }
 
     cout << ans;
-
     return 0;
 }

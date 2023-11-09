@@ -31,7 +31,8 @@ int solve()
     cin >> n;
     vi a (2 * n);
 
-    for (int i = 0; i < 2 * n; i++) {
+    for (int i = 0; i < 2 * n; i++)
+    {
         cin >> a[i];
     }
 
@@ -59,18 +60,21 @@ int solve()
     vi y;
     ll length = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         x.pb (a[i]);
         y.pb (a[2 * n - 1 - i]);
     }
 
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n - 1; i++)
+    {
         length += (abs (x[i] - x[i + 1]) + abs (y[i] - y[i + 1]) );
     }
 
     cout << length << "\n";
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << x[i] << " " << y[i] << "\n";
     }
 

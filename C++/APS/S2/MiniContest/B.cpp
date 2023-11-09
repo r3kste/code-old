@@ -18,18 +18,18 @@ typedef vector<unsigned long long int> vLL;
 int solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
-
-    vi a(n);
-    vll p(n + 1, 0);
+    vi a (n);
+    vll p (n + 1, 0);
     p[0] = 0;
     ll max = -1;
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
         p[i + 1] = (p[i] + a[i]);
+
         if (a[i] > max)
         {
             max = a[i];
@@ -38,7 +38,7 @@ int solve()
 
     for (int i = max; i <= p[n]; i++)
     {
-        int j = lower_bound(p.begin(), p.end(), i) - p.begin();
+        int j = lower_bound (p.begin(), p.end(), i) - p.begin();
         cout << "";
     }
 
@@ -48,7 +48,6 @@ int solve()
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

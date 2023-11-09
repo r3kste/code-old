@@ -17,10 +17,12 @@ void solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,19 +34,18 @@ int main()
 void solve()
 {
     fastio;
-
     int n, c = 0;
     cin >> n;
-    vi h(n);
-    vi a(n);
+    vi h (n);
+    vi a (n);
     map<int, int> k;
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         cin >> h[i];
         cin >> a[i];
         k[a[i]]++;
     }
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         c += k[h[i]];
     }

@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,14 +34,13 @@ int main()
 int solve()
 {
     fastio;
-
     int n, c = 0;
     cin >> n;
-    vi a(n);
-
-    to(i, 0, n, 1)
+    vi a (n);
+    to (i, 0, n, 1)
     {
         cin >> a[i];
+
         if (i > 1)
         {
             if (a[i - 2] >= a[i - 1] && a[i - 1] >= a[i])
@@ -49,6 +50,5 @@ int solve()
         }
     }
     cout << c;
-
     return 0;
 }

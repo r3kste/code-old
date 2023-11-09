@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,13 +34,11 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     ll s = 0;
     // vi a(n);
-
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         int temp;
         cin >> temp;
@@ -46,7 +46,6 @@ int solve()
         // cin >> a[i];
     }
     cout << ((s % n == 0) ? 0 : 1);
-
     // sort(a.begin(), a.end());
     // int u;
     // if (a[n - 1] == a[0])
@@ -75,6 +74,5 @@ int solve()
     //         return 0;
     //     }
     // }
-
     return 0;
 }

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,7 +41,6 @@ int main()
 int solve()
 {
     fastio;
-
     int a, b, c;
     cin >> a >> b >> c;
 

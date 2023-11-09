@@ -80,7 +80,8 @@ int solve()
                 moves += a[r] - x + 1;
                 r--;
 
-                if (a[l] == 0) {
+                if (a[l] == 0)
+                {
                     l++;
                 }
 
@@ -89,7 +90,8 @@ int solve()
         }
         else
         {
-            if (a[l] == 0) {
+            if (a[l] == 0)
+            {
                 break;
             }
 

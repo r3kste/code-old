@@ -26,9 +26,10 @@ typedef vector<long long int> vll;
 
 typedef vector<vector<ll>> matrix;
 ll order;
-matrix m_mul(matrix a, matrix b, ll m)
+matrix m_mul (matrix a, matrix b, ll m)
 {
-    matrix res(order, vector<ll>(order, 0));
+    matrix res (order, vector<ll> (order, 0));
+
     for (int i = 0; i < order; i++)
     {
         for (int j = 0; j < order; j++)
@@ -40,45 +41,48 @@ matrix m_mul(matrix a, matrix b, ll m)
             }
         }
     }
+
     return res;
 }
 
-matrix m_pow(matrix a, ll n, ll m)
+matrix m_pow (matrix a, ll n, ll m)
 {
-    matrix res(order, vector<ll>(order, 0));
+    matrix res (order, vector<ll> (order, 0));
+
     for (ll i = 0; i < order; i++)
+    {
         res[i][i] = 1;
+    }
+
     while (n)
     {
         if (n & 1)
         {
-            res = m_mul(res, a, m);
+            res = m_mul (res, a, m);
         }
+
         n >>= 1;
-        a = m_mul(a, a, m);
+        a = m_mul (a, a, m);
     }
+
     return res;
 }
 
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-
     // vi a(n);
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];
     // }
-
     return 0;
 }
 
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 

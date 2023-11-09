@@ -26,12 +26,16 @@ typedef vector<int> vi;
 typedef vector<pair<int, int>> vii;
 typedef vector<long long int> vll;
 
-Matrix mul (Matrix a, Matrix b) {
+Matrix mul (Matrix a, Matrix b)
+{
     Matrix res (n, vector<ll> (n, 0) );
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < n; k++) {
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            for (int k = 0; k < n; k++)
+            {
                 res[i][j] += a[i][k] * b[k][j];
                 res[i][j] %= MOD;
             }
@@ -41,15 +45,19 @@ Matrix mul (Matrix a, Matrix b) {
     return res;
 }
 
-Matrix expo_power (Matrix a, long long n) {
+Matrix expo_power (Matrix a, long long n)
+{
     Matrix res (n, vector<ll> (n, 0) );
 
-    for (ll i = 0; i < n; ++i) {
+    for (ll i = 0; i < n; ++i)
+    {
         res[i][i] = 1;
     }
 
-    while (k) {
-        if (k & 1) {
+    while (k)
+    {
+        if (k & 1)
+        {
             res = mul (res, a);
         }
 
@@ -69,7 +77,8 @@ int solve()
     cin >> m;
     vi a (k);
 
-    for (int i = 0; i < k; i++) {
+    for (int i = 0; i < k; i++)
+    {
         cin >> a[i];
     }
 
@@ -78,7 +87,8 @@ int solve()
     e[0][0] = 1;
     vector<vector<ll>> t (k, vector<ll> (k, 0) );
 
-    for (int i = 0; i < k; i++) {
+    for (int i = 0; i < k; i++)
+    {
         t[i][0] = a[i];
     }
 

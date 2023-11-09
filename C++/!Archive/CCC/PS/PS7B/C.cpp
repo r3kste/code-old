@@ -17,10 +17,12 @@ void solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,8 +34,7 @@ int main()
 void solve()
 {
     fastio;
-
     int a, b, c;
     cin >> a >> b >> c;
-    cout << max(a + b + c, max(a * b * c, max(a * (b + c), (a + b) * c)));
+    cout << max (a + b + c, max (a * b * c, max (a * (b + c), (a + b) * c)));
 }

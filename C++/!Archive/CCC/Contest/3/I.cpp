@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,27 +41,25 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
-    vi b(n);
+    vi a (n);
+    vi b (n);
     vi c;
     vi d;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
         cin >> b[i];
     }
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
-        to(j, 0, n, j + 1)
+        to (j, 0, n, j + 1)
         {
-            if(i!=j) {
-                c.push_back((a[i]+a[j])/2);
-                d.push_back((b[i]+b[j])/2);
+            if (i != j)
+            {
+                c.push_back ((a[i] + a[j]) / 2);
+                d.push_back ((b[i] + b[j]) / 2);
             }
         }
     }

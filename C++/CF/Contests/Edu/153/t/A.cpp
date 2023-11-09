@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,23 +41,25 @@ int main()
 int solve()
 {
     fastio;
-
     int x, y, n;
     cin >> x >> y >> n;
-
     vi b;
-
     int k = 0;
+
     for (int i = y; i > x - 1; i -= k)
     {
-        b.push_back(i);
+        b.push_back (i);
+
         if (b.size() > n)
         {
             break;
         }
+
         k++;
     }
+
     int l = b.size();
+
     if (l < n)
     {
         cout << -1;
@@ -63,11 +67,13 @@ int solve()
     else
     {
         cout << x << " ";
+
         for (int i = 1; i < n - 1; i++)
         {
             int t = n - i - 1;
             cout << b[t] << " ";
         }
+
         cout << y;
     }
 

@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -36,26 +38,30 @@ int main()
     }
 }
 
-LL power(LL x, LL y, LL mod)
+LL power (LL x, LL y, LL mod)
 {
     LL o = 1;
     x = x % mod;
+
     while (y > 0)
     {
         if (y & 1) // checks whether the LSB of y is 1.
+        {
             o = (o * x) % mod;
+        }
+
         y = y >> 1;        // y = y/2
         x = (x * x) % mod; // x = x*x
     }
+
     return o;
 }
 
 int solve()
 {
     fastio;
-
     int w, h;
     cin >> w >> h;
-    cout << power(2, w + h, MOD); // kinda surprised it works, kinda guessed tho...
+    cout << power (2, w + h, MOD); // kinda surprised it works, kinda guessed tho...
     return 0;
 }

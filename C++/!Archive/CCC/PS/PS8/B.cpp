@@ -17,10 +17,12 @@ void solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,29 +34,24 @@ int main()
 void solve()
 {
     fastio;
-
     int n;
     cin >> n;
-
-    vi a(n);
-    vector<ll> ps(n + 1);
+    vi a (n);
+    vector<ll> ps (n + 1);
     ps[0] = 0;
-
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         cin >> a[i];
         ps[i + 1] = ps[i] + a[i];
     }
-
     int m;
     cin >> m;
-    to(i, 0, m, 1)
+    to (i, 0, m, 1)
     {
         ll temp;
         cin >> temp;
-        int in = lower_bound(ps.begin(), ps.end(), temp) - ps.begin();
+        int in = lower_bound (ps.begin(), ps.end(), temp) - ps.begin();
         cout << in << "\n";
-
         // to(i, 0, n + 1, 1)
         // {
         //     if (temp <= ps[i])

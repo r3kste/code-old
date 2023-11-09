@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -38,25 +40,27 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
-    vi a(n);
+    vi a (n);
     ll mm = MOD;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
+
         if (i == 0)
+        {
             continue;
+        }
+
         ll temp = a[i] - a[i - 1];
+
         if (temp < mm)
         {
             mm = temp;
         }
     }
-
-    bool s = is_sorted(begin(a), end(a));
+    bool s = is_sorted (begin (a), end (a));
 
     if (!s)
     {
@@ -66,7 +70,7 @@ int solve()
     {
         cout << (mm + 2) / 2;
     }
-    a.clear();
 
+    a.clear();
     return 0;
 }

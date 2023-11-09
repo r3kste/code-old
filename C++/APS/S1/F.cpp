@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -36,31 +38,33 @@ int main()
     }
 }
 
-LL power(LL x, LL y, LL mod)
+LL power (LL x, LL y, LL mod)
 {
     LL o = 1;
     x = x % mod;
+
     while (y > 0)
     {
         if (y & 1) // checks whether the LSB of y is 1.
+        {
             o = (o * x) % mod;
+        }
+
         y = y >> 1;        // y = y/2
         x = (x * x) % mod; // x = x*x
     }
+
     return o;
 }
 
 int solve()
 {
     fastio;
-
     LL n;
     cin >> n;
-
     // cout << (power(3, 3 * n, MOD) - power(7, n, MOD)) % MOD; // Inclusion - Exclusion
     // Wrong answer on T7
     // Ok i didnt think about this initially but the above expression could be negative. Now it just makes sense
-
-    cout << ((power(3, 3 * n, MOD) - power(7, n, MOD)) + MOD) % MOD; // Inclusion - Exclusion
+    cout << ((power (3, 3 * n, MOD) - power (7, n, MOD)) + MOD) % MOD; // Inclusion - Exclusion
     return 0;
 }

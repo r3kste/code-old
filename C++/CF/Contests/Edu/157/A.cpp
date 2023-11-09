@@ -30,14 +30,18 @@ int solve()
     int x, y, k;
     cin >> x >> y >> k;
 
-    if (y < x) {
+    if (y < x)
+    {
         cout << x;
     }
-    else {
-        if (y - x <= k) {
+    else
+    {
+        if (y - x <= k)
+        {
             cout << y;
         }
-        else {
+        else
+        {
             cout << x + k + 2 * (y - x - k);
         }
     }

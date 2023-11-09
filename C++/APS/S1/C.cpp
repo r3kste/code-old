@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,10 +41,8 @@ int main()
 int solve()
 {
     fastio;
-
     int x, y, n;
     cin >> x >> y >> n;
-
     // for (int i = n; i > n - x; i--) // there will be atleast one k in this range and it will be the maximum
     // {
     //     if (i % x == y)
@@ -52,8 +52,6 @@ int solve()
     //     }
     // }
     // TLE... rip
-
-    cout << int(floor((n - y)/ x)) * x + y; // lol ok just find the m such that it satisfies k=mx+y and maximum would be when k is nearest to n.
-
+    cout << int (floor ((n - y) / x)) * x + y; // lol ok just find the m such that it satisfies k=mx+y and maximum would be when k is nearest to n.
     return 0;
 }

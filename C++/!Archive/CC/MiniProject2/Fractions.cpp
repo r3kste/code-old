@@ -2,9 +2,9 @@
 #include <bits/stdc++.h>
 
 template <typename T>
-T gcd(T a, T b)
+T gcd (T a, T b)
 {
-    return b ? gcd<T>(b, a % b) : a;
+    return b ? gcd<T> (b, a % b) : a;
 }
 
 //===================== DO NOT TOUCH THE STUFF ABOVE ==========
@@ -17,8 +17,8 @@ T gcd(T a, T b)
 //=========== YOUR CODE HERE ==============
 
 template <typename T>
-inline Fraction<T>::Fraction(T n, T d) : numerator(n), denominator(d)
+inline Fraction<T>::Fraction (T n, T d) : numerator (n), denominator (d)
 {
-    this->numerator=n;
+    this->numerator = n;
     this->denominator = d;
 }

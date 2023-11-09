@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,18 +41,15 @@ int main()
 int solve()
 {
     fastio;
-
     string n;
     cin >> n;
-
     int len = n.length();
-    to(i, 0, len - 1, i + 1)
+    to (i, 0, len - 1, i + 1)
     {
         if (n[i] == n[i + 1])
         {
-            cout << alt(len*2);
-        }   
+            cout << alt (len * 2);
+        }
     }
-
     return 0;
 }

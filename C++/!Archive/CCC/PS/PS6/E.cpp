@@ -31,29 +31,29 @@ void solve();
 
 int main()
 {
-    testitr(true);
+    testitr (true);
 }
 
-ll lcm(int a, int b)
+ll lcm (int a, int b)
 {
     ll p = a * b;
-    ll g = __gcd(a, b);
+    ll g = __gcd (a, b);
     return p / g;
 }
 
-bool check(int a, int b, int n)
+bool check (int a, int b, int n)
 {
-    return lcm(a, b) <= n / 2.0;
+    return lcm (a, b) <= n / 2.0;
 }
 
 void solve()
 {
     fastio;
-
     int n, k;
     cin >> n >> k;
     k = 3;
     int a = 0, b = 0;
+
     if (n % 3 == 0)
     {
         a = n / 3;
@@ -101,5 +101,6 @@ void solve()
             b = (n - 1) / 2;
         }
     }
+
     cout << a << " " << b << " " << b;
 }

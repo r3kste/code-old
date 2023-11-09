@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,7 +41,6 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     int c = 0;
@@ -71,21 +72,22 @@ int solve()
     // {
     //     cout << -1;
     // }
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         char temp;
         cin >> temp;
-        in.push_back(temp);
+        in.push_back (temp);
     }
-    to(i, 0, n - 1, i + 1)
+    to (i, 0, n - 1, i + 1)
     {
-        comp.push_back('d');
+        comp.push_back ('d');
         int t = n - i - 1;
+
         if (in[t] == 'u')
         {
             in[t] = 'd';
             c++;
+
             if (in[t - 1] == 'd')
             {
                 in[t - 1] = 'u';
@@ -96,7 +98,7 @@ int solve()
             }
         }
     }
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         if (in[i] == 'u')
         {
@@ -105,6 +107,5 @@ int solve()
         }
     }
     cout << c;
-
     return 0;
 }

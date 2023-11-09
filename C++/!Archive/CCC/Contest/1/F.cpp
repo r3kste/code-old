@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,20 +34,17 @@ int main()
 int solve()
 {
     fastio;
-
     ll n;
     cin >> n;
     ll x, y;
     cin >> x >> y;
     y = 8 - y + 1;
-
     ll a = x - 1;
     ll b = y - 1;
     ll c = n - x;
     ll d = n - y;
     ll lx = a + c;
     ll ly = b + d;
-    
     cout << "YES";
     return 0;
 }

@@ -24,7 +24,6 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
     cin >> t;
 
@@ -38,22 +37,20 @@ int main()
 int solve()
 {
     fastio;
-
     ll n, k;
     cin >> n >> k;
-
     bool flag = false;
     vi a;
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         int temp;
         cin >> temp;
+
         if (temp == k)
         {
             flag = true;
         }
     }
     cout << ((flag) ? "YES" : "NO");
-
     return 0;
 }

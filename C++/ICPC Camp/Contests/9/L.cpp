@@ -33,27 +33,30 @@ int solve()
     ll steps = 0;
     int ptr = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         string temp;
         cin >> temp;
         char c = temp[0];
 
-        if (c == 'A' || c == 'P' || c == 'R' || c == 'O') {
+        if (c == 'A' || c == 'P' || c == 'R' || c == 'O')
+        {
             steps += (ptr);
             ptr = 0;
         }
         else if ( (c == 'B' || c == 'M' || c == 'S'))
-                   {
-                       steps += abs (ptr - 1);
-                       ptr = 1;
-                   }
-        else {
+        {
+            steps += abs (ptr - 1);
+            ptr = 1;
+        }
+        else
+        {
             steps += (2 - ptr);
-                ptr = 2;
-            }
+            ptr = 2;
+        }
     }
-    cout << steps;
 
+    cout << steps;
     return 0;
 }
 

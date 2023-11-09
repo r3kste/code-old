@@ -3,91 +3,99 @@
 #include <iostream>
 #include "Fractions.cpp"
 
-
-enum OpIdTy{
-  ADD,
-  SUBTRACT,
-  MULTIPLY,
-  DIVIDE,
-  EQUAL,
-  UNEQUAL,
-  LEQ,
-  LESS,
-  GEQ,
-  GREAT,
-  PRINT
+enum OpIdTy
+{
+    ADD,
+    SUBTRACT,
+    MULTIPLY,
+    DIVIDE,
+    EQUAL,
+    UNEQUAL,
+    LEQ,
+    LESS,
+    GEQ,
+    GREAT,
+    PRINT
 };
 
-int main(){
-  int N;
-  std::cin >> N;
+int main()
+{
+    int N;
+    std::cin >> N;
 
-  while(N--){
-    int opId_;
-    std::cin >> opId_;
-    int n, d;
-    
-    std::cin >> n >> d;
-    Fraction<int> f1(n, d);
-    
-    std::cin >> n >> d;
-    Fraction<int> f2(n, d);
-    OpIdTy opId = static_cast<OpIdTy>(opId_);
-    switch (opId){
-      case ADD: 
-        {
-          Fraction<int> f3 = f1 + f2;
+    while (N--)
+    {
+        int opId_;
+        std::cin >> opId_;
+        int n, d;
+        std::cin >> n >> d;
+        Fraction<int> f1 (n, d);
+        std::cin >> n >> d;
+        Fraction<int> f2 (n, d);
+        OpIdTy opId = static_cast<OpIdTy> (opId_);
 
-          std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
-        }
-      case SUBTRACT: 
+        switch (opId)
         {
-          Fraction<int> f3 = f1 - f2;
+        case ADD:
+        {
+            Fraction<int> f3 = f1 + f2;
+            std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
+        }
 
-          std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
-        }
-      case MULTIPLY: 
+        case SUBTRACT:
         {
-          Fraction<int> f3 = f1 * f2;
+            Fraction<int> f3 = f1 - f2;
+            std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
+        }
 
-          std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
-        }
-      case DIVIDE: 
+        case MULTIPLY:
         {
-          Fraction<int> f3 = f1 / f2;
+            Fraction<int> f3 = f1 * f2;
+            std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
+        }
 
-          std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
-        }
-      case EQUAL:
+        case DIVIDE:
         {
-          Fraction<int> f3(f1.get_numerator()*2,f1.get_denominator()*2);
-          std::cout << (f3 == f1) << std::endl;
+            Fraction<int> f3 = f1 / f2;
+            std::cout << f3.get_numerator() << " " << f3.get_denominator() << std::endl;
         }
-      case UNEQUAL:
+
+        case EQUAL:
         {
-          Fraction<int> f3(f1.get_denominator(),f1.get_numerator());
-          std::cout << (f3 != f1) << std::endl;
+            Fraction<int> f3 (f1.get_numerator() * 2, f1.get_denominator() * 2);
+            std::cout << (f3 == f1) << std::endl;
         }
-      case LEQ:
+
+        case UNEQUAL:
         {
-          std::cout << (f2 <= f1) << std::endl;
+            Fraction<int> f3 (f1.get_denominator(), f1.get_numerator());
+            std::cout << (f3 != f1) << std::endl;
         }
-      case LESS:
+
+        case LEQ:
         {
-          std::cout << (f2 < f1) << std::endl;
+            std::cout << (f2 <= f1) << std::endl;
         }
-      case GREAT:
+
+        case LESS:
         {
-          std::cout << (f2 > f1) << std::endl;
+            std::cout << (f2 < f1) << std::endl;
         }
-      case GEQ:
+
+        case GREAT:
         {
-          std::cout << (f2 >= f1) << std::endl;
+            std::cout << (f2 > f1) << std::endl;
         }
-      case PRINT:
+
+        case GEQ:
         {
-          f2.print();
+            std::cout << (f2 >= f1) << std::endl;
+        }
+
+        case PRINT:
+        {
+            f2.print();
+        }
         }
     }
-  }
 }

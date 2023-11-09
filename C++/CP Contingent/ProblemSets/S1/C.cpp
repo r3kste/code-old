@@ -85,10 +85,12 @@ int solve()
     double ans = m_pow (a, n) [0][1];
     // cout << m_mul (m_pow (a, n), m_pow (ini, n) ) [0][0] ;
 
-    if (n % 2) {
+    if (n % 2)
+    {
         cout << ans;
     }
-    else {
+    else
+    {
         cout << 1 - ans;
     }
 

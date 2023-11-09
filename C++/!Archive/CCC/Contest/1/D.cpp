@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,7 +34,6 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
 
@@ -44,7 +45,7 @@ int solve()
             return 0;
         }
     }
-    cout << "YES";
 
+    cout << "YES";
     return 0;
 }

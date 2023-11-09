@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,14 +41,14 @@ int main()
 int solve()
 {
     fastio;
-
     int n;
     cin >> n;
     int co = 0;
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         ll a, b, c;
         cin >> a >> b >> c;
+
         if (a >= 8 && b >= 256 && c <= 60000)
         {
             co++;

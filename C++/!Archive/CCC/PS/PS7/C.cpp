@@ -17,10 +17,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -32,19 +34,18 @@ int main()
 int solve()
 {
     fastio;
-
     int n, e = 0, o = 0;
     cin >> n;
-
-    to(i, 0, n, 1)
+    to (i, 0, n, 1)
     {
         ll temp;
         cin >> temp;
+
         if (temp % 2 == 0)
         {
             e++;
         }
     }
-    cout << min(e, n - e);
+    cout << min (e, n - e);
     return 0;
 }

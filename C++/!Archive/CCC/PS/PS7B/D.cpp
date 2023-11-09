@@ -17,10 +17,12 @@ void solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (false)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -29,7 +31,7 @@ int main()
     }
 }
 
-bool check(int a, int b, int n, int m)
+bool check (int a, int b, int n, int m)
 {
     return (a * a + b == n && b * b + a == m);
 }
@@ -37,16 +39,17 @@ bool check(int a, int b, int n, int m)
 void solve()
 {
     fastio;
-
     int n, m;
     cin >> n >> m;
     int c = 0;
-    to(i, 0, m + 1, 1)
+    to (i, 0, m + 1, 1)
     {
-        to(j, 0, m + 1, 1)
+        to (j, 0, m + 1, 1)
         {
-            if (check(i, j, n, m))
+            if (check (i, j, n, m))
+            {
                 c++;
+            }
         }
     }
     cout << c;

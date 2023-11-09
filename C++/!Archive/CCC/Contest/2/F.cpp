@@ -24,10 +24,12 @@ int solve();
 int main()
 {
     fastio;
-
     int t = 1;
+
     if (true)
+    {
         cin >> t;
+    }
 
     while (t--)
     {
@@ -39,36 +41,34 @@ int main()
 int solve()
 {
     fastio;
-
     int n, x;
     cin >> n >> x;
-    vi r(n);
-    vi s(n);
-    vi a(n);
+    vi r (n);
+    vi s (n);
+    vi a (n);
     ll R = 0, S = 0, A = 0;
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> a[i];
     }
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> s[i];
     }
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         cin >> r[i];
     }
-
-    to(i, 0, n, i + 1)
+    to (i, 0, n, i + 1)
     {
         R = (R | r[i]);
-        to(j, 0, n, j + 1)
+        to (j, 0, n, j + 1)
         {
             S += s[j];
-            to(k, 0, n, k + 1)
+            to (k, 0, n, k + 1)
             {
                 A += a[k];
+
                 if (S | A == R && S + A == x)
                 {
                     cout << "yes";
