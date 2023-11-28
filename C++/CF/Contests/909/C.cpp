@@ -31,10 +31,12 @@ int solve()
     cin >> n;
     vi a (n);
     ll max = -MOD;
+    vi ps (n + 1, 0);
 
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
+        ps[i + 1] = ps[i] + a[i];
 
         if (a[i] > max)
         {
@@ -42,35 +44,46 @@ int solve()
         }
     }
 
+    ll ans = max;
     int l = 0;
     int r = n - 1;
-    int ptr = 0;
+    int ptr = 1;
+    ll sum = 0;
 
-    while (a[l] <= 0 && a[r] <= 0 && l <= r)
+    while (l < n - 1 && ptr < n)
     {
-        l++;
-        r--;
-    }
+        ll temp = a[ptr] + a[ptr - 1];
 
-    ll ans = -MOD;
-
-    while (l < r)
-    {
-        ptr = l;
-        ll sum = 0;
-
-        while (a[ptr] + a[ptr + 1] % 2 != 0)
+        if (a[l] < 0)
         {
-            sum += a[ptr];
-            ptr++;
+            l++;
+            ptr = l + 1;
         }
+        else
+        {
+            if (temp % 2 != 0)
+            {
+                ptr++;
+            }
+            else
+            {
+                l++;
+                ptr = l + 1;
+            }
+        }
+
+        sum = ps[ptr] - ps[l];
 
         if (sum > ans)
         {
             ans = sum;
         }
 
-        l = ptr;
+        if (sum <= 0)
+        {
+            l++;
+            ptr = l + 1;
+        }
     }
 
     cout << ans;
