@@ -23,40 +23,6 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;
 typedef vector<pair<int, int>> vii;
 typedef vector<long long int> vll;
-bool isPrime(int n)
-{
-#define nmod(m) n % m == 0
-
-    if (n < 2)
-    {
-        return false;
-    }
-
-    if (n == 2 || n == 3 || n == 5 || n == 7 || n == 11 || n == 13 || n == 17 || n == 19 || n == 23)
-    {
-        return true;
-    }
-
-    if (nmod(2) || nmod(3) || nmod(5) || nmod(7) || nmod(11) || nmod(13) || nmod(17) || nmod(19) || nmod(23))
-    {
-        return false;
-    }
-
-    for (int i = 23; i < sqrt(n) + 1; i += 6)
-        if (n % i == 0 || n % (i + 2) == 0)
-        {
-            return false;
-        }
-
-    return true;
-}
-int solve()
-{
-    fastio;
-    int n;
-
-    return 0;
-}
 
 int main()
 {
