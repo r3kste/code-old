@@ -35,25 +35,32 @@ int solve()
     //     cin >> a[i];
     // }
     int ans = MOD;
+
     for (int i = 1; i < (n + m); i++)
     {
         int a = n + m - i;
         int b = i;
+
         if (a % b == 0)
         {
-            int cnt=0;
+            int cnt = 0;
+
             if (minindex == 0)
             {
-                cnt = abs(a - n);
+                cnt = abs (a - n);
             }
             else
-                cnt = abs(b - m);
+            {
+                cnt = abs (b - m);
+            }
+
             if (cnt < ans)
             {
                 ans = cnt;
             }
         }
     }
+
     cout << ans;
     return 0;
 }

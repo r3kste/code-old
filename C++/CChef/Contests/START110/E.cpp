@@ -30,16 +30,13 @@ int main()
     int t = 1;
     cin >> t;
     int n = 1000000;
-
     // gfg code https://www.geeksforgeeks.org/sieve-of-eratosthenes/
     // Create a boolean array "prime[0..n]" and initialize
     // all entries it as true. A value in prime[i] will
     // finally be false if i is Not a prime, else true.
-
     // bool prime[n + 1];
     // memset(prime, true, sizeof(prime));
-
-    vector<bool> prime(n + 1, true);
+    vector<bool> prime (n + 1, true);
 
     for (int p = 2; p * p <= n; p++)
     {
@@ -51,9 +48,12 @@ int main()
             // multiple of p and are less than p^2 are
             // already been marked.
             for (int i = p * p; i <= n; i += p)
+            {
                 prime[i] = false;
+            }
         }
     }
+
     while (t--)
     {
         // solve();
@@ -66,8 +66,8 @@ int main()
         //
         ll ans = MOD;
         bool flag = false;
-        double temp = log2(n + 1);
-        int inttemp = (int(log2(n + 1)));
+        double temp = log2 (n + 1);
+        int inttemp = (int (log2 (n + 1)));
 
         if (prime[n])
         {
@@ -81,7 +81,6 @@ int main()
         }
         else
         {
-
             // for (int p = n; p >= 2; p--)
             // {
             //     if (prime[p])
@@ -102,10 +101,10 @@ int main()
             //         }
             //     }
             // }
-
             // cant beleive i didnt think the other way around
             int c = 0;
             int k = 1;
+
             while (n > 0)
             {
                 if (prime[n])
@@ -116,11 +115,13 @@ int main()
                         flag = true;
                     }
                 }
+
                 n -= k;
                 k *= 2;
                 c++;
             }
         }
+
         if (flag)
         {
             // cout << "a[" << n - 1 << "]=";
@@ -131,6 +132,7 @@ int main()
         {
             cout << -1;
         }
+
         cout << "\n";
     }
 }
