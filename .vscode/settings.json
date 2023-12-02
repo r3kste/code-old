@@ -26,5 +26,6 @@
         "chrono": "cpp",
         "span": "cpp"
     },
-    "git.suggestSmartCommit": false
+    "git.suggestSmartCommit": false,
+    "editor.lineNumbers": "relative"
 }

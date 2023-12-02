@@ -31,7 +31,7 @@ int solve()
     cin >> n;
     string s;
     cin >> s;
-    map<string, bool> a;
+    // map<string, bool> a;
     // vector<char> a;
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];
@@ -40,28 +40,32 @@ int solve()
 
     for (int i = 0; i < n - 1; i++)
     {
-        string perm = "";
-
-        if (i != 0)
+        // string perm = "";
+        //
+        // if (i != 0)
+        // {
+        //     perm = s.substr (0, i);
+        // }
+        //
+        // string temp = s.substr (i + 2, n - i - 2);
+        // perm = perm + "" + temp;
+        //
+        // if (a[perm])
+        // {
+        //     continue;
+        // }
+        // else
+        // {
+        //     a[perm] = true;
+        //     c++;
+        // }
+        if (s[i] == s[i + 2])
         {
-            perm = s.substr (0, i);
-        }
-
-        string temp = s.substr (i + 2, n - i - 2);
-        perm = perm + "" + temp;
-
-        if (a[perm])
-        {
-            continue;
-        }
-        else
-        {
-            a[perm] = true;
             c++;
         }
     }
 
-    cout << c;
+    cout << n - 1 - c;
     return 0;
 }
 
