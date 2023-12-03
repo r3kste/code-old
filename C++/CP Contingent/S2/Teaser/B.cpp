@@ -24,33 +24,26 @@ typedef vector<int> vi;
 typedef vector<pair<int, int>> vii;
 typedef vector<long long int> vll;
 
-vi dp (26, -1);
+vll dp (1000001, 0);
 
-int calc (int n)
+ll calc (int n)
 {
-    if (n < 0)
+    dp[0] = 1;
+
+    for (int i = 1; i <= n; i++)
     {
-        return 0;
+        ll sum = 0;
+
+        for (int j = 1; j <= 6; j++)
+        {
+            if (i - j >= 0)
+            {
+                dp[i]= dp[i]+ dp[i - j] % MOD;
+            }
+        }
     }
 
-    if (n == 0)
-    {
-        dp[0] = 1;
-        return 1;
-    }
-    else
-    {
-        if (dp[n] != -1)
-        {
-            return dp[n];
-        }
-        else
-        {
-            dp[n] = calc (n - 1) + calc (n - 2) + calc (n - 3) + calc (n - 4) + calc (n - 5) + calc (n - 6);
-            dp[n] = dp[n] % MOD;
-            return dp[n];
-        }
-    }
+    return dp[n];
 }
 int solve()
 {
@@ -61,7 +54,7 @@ int solve()
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];
     // }
-    cout << calc (n);
+    cout << calc (n) % MOD;
     return 0;
 }
 
