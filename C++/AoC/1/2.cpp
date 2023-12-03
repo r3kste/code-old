@@ -15,7 +15,6 @@ using namespace std;
 #define pb push_back
 #define all(a) (a).begin(), (a).end()
 #define rall(a) (a).rbegin(), (a).rend()
-
 typedef long long int ll;
 typedef unsigned long long int LL;
 typedef pair<int, int> ii;

@@ -67,7 +67,7 @@ int solve()
     // for (int i = 0; i < n; i++) {
     //     cin >> a[i];
     // }
-    // 
+    //
     cout << sum;
     return 0;
 }
